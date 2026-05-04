@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player de Playbacks</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<h2>🎵 Diego Nascimento 🎵</h2>
+<h1>Playbacks</h1>
+
+<ul id="playlist">
+  <li onclick="playMusic('music/emocoes.mp3', 'Emoções')">Emoções - Roberto Carlos - A</li>
+  <li onclick="playMusic('music/flyMeToTheMoon.mp3', 'Fly Me to the Moon')">Fly Me to the Moon - Frank Sinatra - A</li>
+  <li onclick="playMusic('music/SomewhereOvertheRainbow.mp3', 'Somewhere Over The Rainbow')">Somewhere Over The Rainbow - Tony Bennett - A</li>
+  <li onclick="playMusic('music/beyondtheSea.mp3', 'La Mer')">La Mer - Charles Trenet - A</li>
+  <li onclick="playMusic('music/ItsMyLife.mp3', 'It´s My Life')">It´s My Life - Paul Anka - A</li>
+  <li onclick="playMusic('music/jump.mp3', 'Jump')">Jump - Paul Anka - A</li>
+  <li onclick="playMusic('music/letMeTryAgain.mp3', 'Let Me Try Again')">Let Me Try Again - Frank Sinatra - A</li>
+  <li onclick="playMusic('music/myWay.mp3', 'My Way')">My Way - Frank Sinatra - A</li>
+  <li onclick="playMusic('music/newYork,NewYork.mp3', 'New York, New York')">New York - Frank Sinatra - A</li>
+  <li onclick="playMusic('music/brazil.mp3', 'Brazil')">Brazil - Frank Sinatra - A</li>
+  <li onclick="playMusic('music/Samba de Uma Nota Só.mp3', 'Samba de Uma Nota Só')">Samba de Uma Nota Só - Tom Jobim - A</li>
+</ul>
+
+<audio id="player"></audio>
+
+<!-- PLAYER FIXO -->
+<div id="playerBar">
+  <div id="musicName">Nenhuma música</div>
+
+  <div class="controls">
+    <button onclick="playCurrent()">▶</button>
+    <button onclick="pauseMusic()">⏸</button>
+    <button onclick="stopMusic()">⏹</button>
+  </div>
+</div>
+
+<!-- Popup -->
+<div id="popup">
+  <div class="popup-box">
+    <p>Trocar a música atual?</p>
+    <button onclick="confirmChange()">YES</button>
+    <button onclick="closePopup()">NO</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
