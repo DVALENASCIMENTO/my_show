@@ -13,17 +13,100 @@
 <h1>Playbacks</h1>
 
 <ul id="playlist">
-  <li onclick="playMusic('music/emocoes.mp3', 'Emoções')">Emoções - Roberto Carlos - A</li>
-  <li onclick="playMusic('music/flyMeToTheMoon.mp3', 'Fly Me to the Moon')">Fly Me to the Moon - Frank Sinatra - A</li>
-  <li onclick="playMusic('music/SomewhereOvertheRainbow.mp3', 'Somewhere Over The Rainbow')">Somewhere Over The Rainbow - Tony Bennett - A</li>
-  <li onclick="playMusic('music/beyondtheSea.mp3', 'La Mer')">La Mer - Charles Trenet - A</li>
-  <li onclick="playMusic('music/ItsMyLife.mp3', 'It´s My Life')">It´s My Life - Paul Anka - A</li>
-  <li onclick="playMusic('music/jump.mp3', 'Jump')">Jump - Paul Anka - A</li>
-  <li onclick="playMusic('music/letMeTryAgain.mp3', 'Let Me Try Again')">Let Me Try Again - Frank Sinatra - A</li>
-  <li onclick="playMusic('music/myWay.mp3', 'My Way')">My Way - Frank Sinatra - A</li>
-  <li onclick="playMusic('music/newYork,NewYork.mp3', 'New York, New York')">New York - Frank Sinatra - A</li>
-  <li onclick="playMusic('music/brazil.mp3', 'Brazil')">Brazil - Frank Sinatra - A</li>
-  <li onclick="playMusic('music/Samba de Uma Nota Só.mp3', 'Samba de Uma Nota Só')">Samba de Uma Nota Só - Tom Jobim - A</li>
+  <li>
+    <span onclick="playMusic('music/emocoes.mp3', 'Emoções')">Emoções - Roberto Carlos - A</span>
+    <button onclick="showLyrics('Emoções')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/flyMeToTheMoon.mp3', 'Fly Me to the Moon')">Fly Me to the Moon - Frank Sinatra - A</span>
+    <button onclick="showLyrics('Fly Me to the Moon')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/SomewhereOvertheRainbow.mp3', 'Somewhere Over The Rainbow')">Somewhere Over The Rainbow - Tony Bennett - A</span>
+    <button onclick="showLyrics('Somewhere Over The Rainbow')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/beyondtheSea.mp3', 'La Mer')">La Mer - Charles Trenet - A</span>
+    <button onclick="showLyrics('La Mer')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/Perfídia Jazz Bigband .mp3', 'Perfídia')">Perfídia</span>
+    <button onclick="showLyrics('Perfídia')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/ItsMyLife.mp3', 'It´s My Life')">It´s My Life - Paul Anka - A</span>
+    <button onclick="showLyrics('It´s My Life')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/jump.mp3', 'Jump')">Jump - Paul Anka - A</span>
+    <button onclick="showLyrics('Jump')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/letMeTryAgain.mp3', 'Let Me Try Again')">Let Me Try Again - Frank Sinatra - A</span>
+    <button onclick="showLyrics('Let Me Try Again')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/myWay.mp3', 'My Way')">My Way - Frank Sinatra - A</span>
+    <button onclick="showLyrics('My Way')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/newYork,NewYork.mp3', 'New York, New York')">New York - Frank Sinatra - A</span>
+    <button onclick="showLyrics('New York, New York')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/brazil.mp3', 'Brazil')">Brazil - Frank Sinatra - A</span>
+    <button onclick="showLyrics('Brazil')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/Samba de Uma Nota Só.mp3', 'Samba de Uma Nota Só')">Samba de Uma Nota Só - Tom Jobim - A</span>
+    <button onclick="showLyrics('Samba de Uma Nota Só')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/TuSaisJeVaiTaimer.mp3', 'TuSaisJeVaiTaimer')">Tu Sais Je Vai Taimer</span>
+    <button onclick="showLyrics('TuSaisJeVaiTaimer')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/Easy.mp3', 'Easy')">Easy</span>
+    <button onclick="showLyrics('Easy')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/Dont Dream It´s Over.mp3', 'Dont Dream It´s Over')">Dont Dream It´s Over</span>
+    <button onclick="showLyrics('Dont Dream It´s Over')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/Every Breath You Take.mp3', 'Every Breath You Take')">Every Breath You Take</span>
+    <button onclick="showLyrics('Every Breath You Take')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/Every Breath You Take.mp3', 'Every Breath You Take')">Every Breath You Take</span>
+    <button onclick="showLyrics('Every Breath You Take')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/Just The Wy You Are.mp3', 'Just The Wy You Are')">Just The Wy You Are</span>
+    <button onclick="showLyrics('Just The Wy You Are')">Letra</button>
+  </li>
+
+  <li>
+    <span onclick="playMusic('music/Little Respect.mp3', 'Little Respect')">A Little Respect</span>
+    <button onclick="showLyrics('Little Respect')">Letra</button>
+  </li>
 </ul>
 
 <audio id="player"></audio>
@@ -45,6 +128,15 @@
     <p>Trocar a música atual?</p>
     <button onclick="confirmChange()">YES</button>
     <button onclick="closePopup()">NO</button>
+  </div>
+</div>
+
+<!-- Popup Letra -->
+<div id="lyricsPopup">
+  <div class="popup-box lyrics-box">
+    <h3 id="lyricsTitle">Letra</h3>
+    <pre id="lyricsContent"></pre>
+    <button onclick="closeLyrics()">Fechar</button>
   </div>
 </div>
 

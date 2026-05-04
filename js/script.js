@@ -105,3 +105,30 @@ function stopMusic() {
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
 }
+
+// LETRAS
+let lyricsData = {};
+
+// Carrega JSON das letras
+fetch("data/lyrics.json")
+  .then(response => response.json())
+  .then(data => {
+    lyricsData = data;
+  })
+  .catch(err => {
+    console.error("Erro ao carregar letras:", err);
+  });
+
+// Mostrar letra
+function showLyrics(songName) {
+  const lyrics = lyricsData[songName] || "Letra não disponível.";
+
+  document.getElementById("lyricsTitle").innerText = songName;
+  document.getElementById("lyricsContent").innerText = lyrics;
+  document.getElementById("lyricsPopup").classList.add("active");
+}
+
+// Fechar letra
+function closeLyrics() {
+  document.getElementById("lyricsPopup").classList.remove("active");
+}
