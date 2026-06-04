@@ -303,3 +303,76 @@ li button:hover {
   margin: 20px 0;
   font-size: 15px;
 }
+
+
+
+
+#autoPlayer {
+  margin: 100px 20px 120px;
+  padding: 20px;
+  background: #222;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#autoPlayer audio {
+  width: 100%;
+  max-width: 600px;
+}
+
+#currentTrack {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+
+.playlist-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.playlist-controls button {
+  background: linear-gradient(135deg, #1db954, #169c46);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(29, 185, 84, 0.4);
+  min-width: 120px;
+}
+
+.playlist-controls button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(29, 185, 84, 0.6);
+}
+
+.playlist-controls button:active {
+  transform: scale(0.95);
+}
+
+.playlist-controls button:nth-child(2) {
+  font-size: 18px;
+  min-width: 140px;
+  padding: 14px 24px;
+}
+
+@media (max-width: 600px) {
+  .playlist-controls {
+    flex-direction: column;
+  }
+
+  .playlist-controls button {
+    width: 100%;
+    max-width: 280px;
+  }
+}

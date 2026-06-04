@@ -132,3 +132,90 @@ function showLyrics(songName) {
 function closeLyrics() {
   document.getElementById("lyricsPopup").classList.remove("active");
 }
+
+
+
+const playlist = [
+  { file: "music/emocoes.mp3", title: "Emoções - Roberto Carlos" },
+  { file: "music/flyMeToTheMoon.mp3", title: "Fly Me To The Moon" },
+  { file: "music/SomewhereOvertheRainbow.mp3", title: "Somewhere Over The Rainbow" },
+  { file: "music/beyondtheSea.mp3", title: "La Mer" },
+  { file: "music/Perfídia Jazz Bigband .mp3", title: "Perfídia" },
+  { file: "music/ItsMyLife.mp3", title: "It's My Life" },
+  { file: "music/jump.mp3", title: "Jump" },
+  { file: "music/letMeTryAgain.mp3", title: "Let Me Try Again" },
+  { file: "music/myWay.mp3", title: "My Way" },
+  { file: "music/newYork,NewYork.mp3", title: "New York, New York" },
+  { file: "music/brazil.mp3", title: "Brazil" },
+  { file: "music/Samba de Uma Nota Só.mp3", title: "Samba de Uma Nota Só" },
+  { file: "music/TuSaisJeVaiTaimer.mp3", title: "Tu Sais Je Vai T'aimer" },
+  { file: "music/Aline - Christophe (Playback).mp3", title: "Aline" },
+  { file: "music/Easy.mp3", title: "Easy" },
+  { file: "music/Dont Dream It´s Over.mp3", title: "Don't Dream It's Over" },
+  { file: "music/Every Breath You Take.mp3", title: "Every Breath You Take" },
+  { file: "music/WithOrWithoutYou.mp3", title: "With Or Without You" },
+  { file: "music/Just The Wy You Are.mp3", title: "Just The Way You Are" },
+  { file: "music/Little Respect.mp3", title: "A Little Respect" },
+  { file: "music/africa.mp3", title: "Africa" },
+  { file: "music/I Wanna Know What Love Is.mp3", title: "I Wanna Know What Love Is" },
+  { file: "music/Can´t Help Falling in Love.mp3", title: "Can't Help Falling In Love" },
+  { file: "music/Slave to Love Reggae BigBand.mp3", title: "Slave To Love" },
+  { file: "music/Is This Love Reggae.mp3", title: "Is This Love" },
+  { file: "music/vamosFugir.mp3", title: "Vamos Fugir" },
+  { file: "music/rude.mp3", title: "Rude" }
+];
+
+let currentIndex = 0;
+
+const playlistPlayer = document.getElementById("playlistPlayer");
+const currentTrack = document.getElementById("currentTrack");
+
+playlistPlayer.src = playlist[currentIndex].file;
+
+playlistPlayer.addEventListener("ended", () => {
+  currentIndex++;
+
+  if (currentIndex >= playlist.length) {
+    currentIndex = 0; // reinicia a playlist
+  }
+
+  playlistPlayer.src = playlist[currentIndex].file;
+  currentTrack.textContent = playlist[currentIndex].title;
+  playlistPlayer.play();
+});
+
+playlistPlayer.addEventListener("play", () => {
+  currentTrack.textContent = playlist[currentIndex].title;
+});
+
+function playPlaylist() {
+  playlistPlayer.play();
+}
+
+function pausePlaylist() {
+  playlistPlayer.pause();
+}
+
+function nextTrack() {
+  currentIndex++;
+
+  if (currentIndex >= playlist.length) {
+    currentIndex = 0;
+  }
+
+  playlistPlayer.src = playlist[currentIndex].file;
+  currentTrack.textContent = playlist[currentIndex].title;
+  playlistPlayer.play();
+}
+
+function prevTrack() {
+  currentIndex--;
+
+  if (currentIndex < 0) {
+    currentIndex = playlist.length - 1;
+  }
+
+  playlistPlayer.src = playlist[currentIndex].file;
+  currentTrack.textContent = playlist[currentIndex].title;
+  playlistPlayer.play();
+}

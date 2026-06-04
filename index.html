@@ -180,6 +180,23 @@
   </div>
 </div>
 
+<!-- PLAYER AUTOMÁTICO -->
+<div id="autoPlayer">
+  <h3>🎶 Playlist Automática</h3>
+
+  <audio id="playlistPlayer" controls></audio>
+
+  <div class="playlist-controls">
+    <button onclick="prevTrack()">⏮ Anterior</button>
+    <button onclick="playPlaylist()">▶ Play</button>
+    <button onclick="pausePlaylist()">⏸ Pause</button>
+    <button onclick="nextTrack()">⏭ Próxima</button>
+  </div>
+
+  <p id="currentTrack">Nenhuma música</p>
+</div>
+
+
 <script src="js/script.js"></script>
 
 </body>
