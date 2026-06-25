@@ -3,8 +3,10 @@ const CACHE_NAME = "player-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/css/style.css",
-  "/js/app.js"
+  "/css/styles.css",
+  "/js/script.js",
+  "/manifest.json",
+  "/icon.png"
 ];
 
 self.addEventListener("install", event => {
